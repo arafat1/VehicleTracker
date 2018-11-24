@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 /**
  * A data class for holding vehicle information.
@@ -78,7 +79,7 @@ public final class Vehicle {
         }
     }
 
-    private Vehicle(Builder builder) {
+    private Vehicle(@NotNull Builder builder) {
         this.vin = builder.vin;
         this.model = builder.model;
         this.make = builder.make;
