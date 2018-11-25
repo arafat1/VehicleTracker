@@ -4,6 +4,11 @@ import lombok.*;
 
 import javax.persistence.Embeddable;
 
+/**
+ * An embeddable class in Reading entity
+ *
+ * @author marafat
+ */
 @Data
 @AllArgsConstructor
 @Embeddable
