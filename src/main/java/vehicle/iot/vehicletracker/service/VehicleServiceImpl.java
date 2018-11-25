@@ -2,6 +2,7 @@ package vehicle.iot.vehicletracker.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import vehicle.iot.vehicletracker.entity.Vehicle;
 import vehicle.iot.vehicletracker.exception.BadRequestException;
 import vehicle.iot.vehicletracker.exception.ResourceNotFoundException;
@@ -21,6 +22,7 @@ public class VehicleServiceImpl implements VehicleService {
         this.vehicleRepository = vehicleRepository;
     }
 
+    @Transactional
     @Override
     public List<Vehicle> findAll() {
         List<Vehicle> vehicles = (List<Vehicle>) vehicleRepository.findAll();
@@ -29,6 +31,7 @@ public class VehicleServiceImpl implements VehicleService {
         return vehicles;
     }
 
+    @Transactional
     @Override
     public Vehicle findOne(String vin) {
         Optional<Vehicle> vehicle = vehicleRepository.findById(vin);
@@ -37,6 +40,7 @@ public class VehicleServiceImpl implements VehicleService {
         return vehicle.get();
     }
 
+    @Transactional
     @Override
     public Vehicle create(Vehicle vehicle) {
         if (vehicleRepository.findById(vehicle.getVin()).isPresent())
@@ -44,6 +48,7 @@ public class VehicleServiceImpl implements VehicleService {
         return vehicleRepository.save(vehicle);
     }
 
+    @Transactional
     @Override
     public Vehicle update(String vin, Vehicle vehicle) {
         if (!vehicleRepository.findById(vin).isPresent())
@@ -51,6 +56,7 @@ public class VehicleServiceImpl implements VehicleService {
         return vehicleRepository.save(vehicle);
     }
 
+    @Transactional
     @Override
     public void delete(String vin) {
         Optional<Vehicle> vehicle = vehicleRepository.findById(vin);
