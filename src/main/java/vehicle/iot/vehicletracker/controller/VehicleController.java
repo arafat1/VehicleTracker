@@ -38,6 +38,11 @@ public class VehicleController {
         return vehicleService.create(vehicle);
     }
 
+    @RequestMapping(method = RequestMethod.PUT)
+    public List<Vehicle>  updateAll(@RequestBody List<Vehicle> vehicles) {
+        return vehicleService.updateAll(vehicles);
+    }
+
     @RequestMapping(method = RequestMethod.PUT, value = "{vin}")
     public Vehicle update(@PathVariable String vin, @RequestBody Vehicle vehicle) {
         return vehicleService.update(vin, vehicle);

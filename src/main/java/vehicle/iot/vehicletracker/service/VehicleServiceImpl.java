@@ -56,6 +56,12 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Transactional
     @Override
+    public List<Vehicle> updateAll(List<Vehicle> vehicle) {
+        return (List<Vehicle>) vehicleRepository.saveAll(vehicle);
+    }
+
+    @Transactional
+    @Override
     public Vehicle update(String vin, Vehicle vehicle) {
         if (!vehicleRepository.findById(vin).isPresent())
             throw new ResourceNotFoundException("Vehicle with vin "+vin+" does not exist");

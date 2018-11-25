@@ -109,6 +109,23 @@ class VehicleServiceImplTest {
     }
 
     @Test
+    void updateAllTest() {
+        Vehicle vehicle = vehicleBuilder.build();
+        List<Vehicle> vl = new ArrayList<>();
+        vl.add(vehicle);
+
+        // given
+        given((vehicleRepository.saveAll(vl))).willReturn(vl);
+
+        // when
+        List<Vehicle> result = vehicleServiceImpl.updateAll(vl);
+
+        // assert
+        assertThat(result).containsOnlyElementsOf(vl);
+
+    }
+
+    @Test
     void updateTest() {
         Vehicle vehicle = vehicleBuilder.build();
 

@@ -18,6 +18,9 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import vehicle.iot.vehicletracker.entity.Vehicle;
 import vehicle.iot.vehicletracker.repository.VehicleRepository;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Integration Tests
  *
@@ -102,6 +105,29 @@ class VehicleControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(mapper.writeValueAsBytes(vehicleBuilder.build())))
                 .andExpect(MockMvcResultMatchers.status().isBadRequest());
+    }
+
+    @Test
+    void updateAll() throws Exception {
+        Vehicle.Builder vehicleBuilder = new Vehicle.Builder("5");
+        vehicleBuilder.setMake("Honda").setModel("Civic").setYear(2010).setRedlineRpm(4000)
+                .setMaxFuelVolume(12).setLastServiceDate("2016-05-25T17:31:25.268Z");
+        List<Vehicle> vl = new ArrayList<>();
+        vl.add(vehicleBuilder.build());
+
+        vehicleBuilder = new Vehicle.Builder("7");
+        vehicleBuilder.setMake("Toyota").setModel("Camry").setYear(2009).setRedlineRpm(4500)
+                .setMaxFuelVolume(14).setLastServiceDate("2012-05-25T17:31:25.268Z");
+        vl.add(vehicleBuilder.build());
+
+        ObjectMapper mapper = new ObjectMapper();
+
+        mvc.perform(MockMvcRequestBuilders.put("/vehicles")
+                                            .contentType(MediaType.APPLICATION_JSON)
+                                            .content(mapper.writeValueAsBytes(vl)))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.jsonPath("$[0].vin", Matchers.is("5")))
+                .andExpect(MockMvcResultMatchers.jsonPath("$[1].model", Matchers.is("Camry")));
     }
 
     @Test
