@@ -4,7 +4,11 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
+import java.util.List;
+import java.util.Set;
 
 /**
  * A data class for holding vehicle information.
@@ -26,6 +30,13 @@ public final class Vehicle {
     private final int redlineRmp;
     private final int maxFuelVolume;
     private final String lastServiceDate;
+    @OneToMany
+    @JoinColumn(name = "vin", referencedColumnName = "vin")
+    private Set<Reading> readings;
+
+    public Set<Reading> getReading() {
+        return readings;
+    }
 
     /**
      * Builder for building a vehicle object

@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Entity
 public final class Reading {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private final String vin;
     private final double latitude;
