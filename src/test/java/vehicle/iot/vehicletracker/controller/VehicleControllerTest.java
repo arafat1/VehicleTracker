@@ -47,7 +47,7 @@ class VehicleControllerTest {
 
         vehicleBuilder = new Vehicle.Builder("6");
         vehicleBuilder.setMake("Honda").setModel("Turbo").setYear(2013).setRedlineRpm(6000)
-                .setMaxFuelVolume(18).setLastServiceDate("2016-05-25T17:31:25.268Z");
+                        .setMaxFuelVolume(18).setLastServiceDate("2016-05-25T17:31:25.268Z");
         vehicleRepository.save(vehicleBuilder.build());
     }
 

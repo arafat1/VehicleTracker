@@ -13,9 +13,9 @@ import javax.validation.constraints.NotNull;
  * @author marafat
  */
 
-@Getter
-@ToString
 @EqualsAndHashCode
+@ToString
+@Getter
 @Entity
 public final class Vehicle {
     @Id
@@ -30,8 +30,8 @@ public final class Vehicle {
     /**
      * Builder for building a vehicle object
      */
-    public static class Builder {
-        private String vin;
+    public static final class Builder {
+        private final String vin;
         private String model;
         private String make;
         private int year;
