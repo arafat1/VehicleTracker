@@ -40,7 +40,7 @@ class VehicleServiceImplTest {
         vehicleBuilder.setMake("Honda");
         vehicleBuilder.setModel("Accord");
         vehicleBuilder.setYear(2015);
-        vehicleBuilder.setMaxRpm(5000);
+        vehicleBuilder.setRedlineRpm(5000);
         vehicleBuilder.setMaxFuelVolume(15);
         vehicleBuilder.setLastServiceDate("2017-05-25T17:31:25.268Z");
     }

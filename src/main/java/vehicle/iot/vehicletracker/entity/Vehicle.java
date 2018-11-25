@@ -23,7 +23,7 @@ public final class Vehicle {
     private final String model;
     private final String make;
     private final int year;
-    private final int maxRpm;
+    private final int redlineRmp;
     private final int maxFuelVolume;
     private final String lastServiceDate;
 
@@ -35,7 +35,7 @@ public final class Vehicle {
         private String model;
         private String make;
         private int year;
-        private int maxRpm;
+        private int redlineRpm;
         private int maxFuelVolume;
         private String lastServiceDate;
 
@@ -59,8 +59,8 @@ public final class Vehicle {
             return this;
         }
 
-        public Builder setMaxRpm(int maxRpm) {
-            this.maxRpm = maxRpm;
+        public Builder setRedlineRpm(int redlineRpm) {
+            this.redlineRpm = redlineRpm;
             return this;
         }
 
@@ -84,7 +84,7 @@ public final class Vehicle {
         this.model = builder.model;
         this.make = builder.make;
         this.year = builder.year;
-        this.maxRpm = builder.maxRpm;
+        this.redlineRmp = builder.redlineRpm;
         this.maxFuelVolume = builder.maxFuelVolume;
         this.lastServiceDate = builder.lastServiceDate;
     }
@@ -94,7 +94,7 @@ public final class Vehicle {
         this.model = null;
         this.make = null;
         this.year = 0;
-        this.maxRpm = 0;
+        this.redlineRmp = 0;
         this.maxFuelVolume = 0;
         this.lastServiceDate = null;
     }

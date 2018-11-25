@@ -38,12 +38,12 @@ class VehicleControllerTest {
     @BeforeEach
     void setUp() {
         Vehicle.Builder vehicleBuilder = new Vehicle.Builder("5");
-        vehicleBuilder.setMake("Honda").setModel("Accord").setYear(2015).setMaxRpm(5000)
+        vehicleBuilder.setMake("Honda").setModel("Accord").setYear(2015).setRedlineRpm(5000)
                         .setMaxFuelVolume(15).setLastServiceDate("2017-05-25T17:31:25.268Z");
         vehicleRepository.save(vehicleBuilder.build());
 
         vehicleBuilder = new Vehicle.Builder("6");
-        vehicleBuilder.setMake("Honda").setModel("Turbo").setYear(2013).setMaxRpm(6000)
+        vehicleBuilder.setMake("Honda").setModel("Turbo").setYear(2013).setRedlineRpm(6000)
                 .setMaxFuelVolume(18).setLastServiceDate("2016-05-25T17:31:25.268Z");
         vehicleRepository.save(vehicleBuilder.build());
     }
@@ -77,7 +77,7 @@ class VehicleControllerTest {
     @Test
     void create() throws Exception {
         Vehicle.Builder vehicleBuilder = new Vehicle.Builder("7");
-        vehicleBuilder.setMake("Honda").setModel("Civic").setYear(2010).setMaxRpm(4000)
+        vehicleBuilder.setMake("Honda").setModel("Civic").setYear(2010).setRedlineRpm(4000)
                 .setMaxFuelVolume(12).setLastServiceDate("2016-05-25T17:31:25.268Z");
 
         ObjectMapper mapper = new ObjectMapper();
@@ -93,7 +93,7 @@ class VehicleControllerTest {
     @Test
     void create404() throws Exception {
         Vehicle.Builder vehicleBuilder = new Vehicle.Builder("5");
-        vehicleBuilder.setMake("Honda").setModel("Civic").setYear(2010).setMaxRpm(4000)
+        vehicleBuilder.setMake("Honda").setModel("Civic").setYear(2010).setRedlineRpm(4000)
                 .setMaxFuelVolume(12).setLastServiceDate("2016-05-25T17:31:25.268Z");
 
         ObjectMapper mapper = new ObjectMapper();
@@ -107,7 +107,7 @@ class VehicleControllerTest {
     @Test
     void update() throws Exception {
         Vehicle.Builder vehicleBuilder = new Vehicle.Builder("5");
-        vehicleBuilder.setMake("Honda").setModel("Civic").setYear(2010).setMaxRpm(4000)
+        vehicleBuilder.setMake("Honda").setModel("Civic").setYear(2010).setRedlineRpm(4000)
                 .setMaxFuelVolume(12).setLastServiceDate("2016-05-25T17:31:25.268Z");
 
         ObjectMapper mapper = new ObjectMapper();
