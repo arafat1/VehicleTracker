@@ -12,13 +12,13 @@ import javax.persistence.Embeddable;
 @Data
 @AllArgsConstructor
 @Embeddable
-public final class Tyre {
+public final class Tires {
     private final int frontLeft;
     private final int frontRight;
     private final int rearLeft;
     private final int rearRight;
 
-    public Tyre() {
+    public Tires() {
         this(0, 0, 0, 0);
     }
 }

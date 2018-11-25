@@ -27,7 +27,7 @@ public final class Reading {
     private final boolean cruiseControlOn;
     private final int engineRpm;
     @Embedded
-    private final Tyre tires;
+    private final Tires tires;
 
     public static final class Builder {
         private String vin;
@@ -41,7 +41,7 @@ public final class Reading {
         private boolean engineCoolantLow;
         private boolean cruiseControlOn;
         private int engineRpm;
-        private Tyre tires;
+        private Tires tires;
 
         public Builder() {}
 
@@ -100,7 +100,7 @@ public final class Reading {
             return this;
         }
 
-        public Builder setTires(Tyre tires) {
+        public Builder setTires(Tires tires) {
             this.tires = tires;
             return this;
         }
