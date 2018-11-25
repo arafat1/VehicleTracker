@@ -4,7 +4,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
- * Thrown when creating existing vehicle
+ * Thrown when id already exists
  *
  * @author marafat
  */

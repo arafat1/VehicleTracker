@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Integration Tests
+ * Integration Tests for Vehicle end points
  *
  * @author marafat
  */
@@ -31,7 +31,6 @@ import java.util.List;
 @AutoConfigureMockMvc
 @ActiveProfiles("integrationtest")
 class VehicleControllerTest {
-
     @Autowired
     MockMvc mvc;
 

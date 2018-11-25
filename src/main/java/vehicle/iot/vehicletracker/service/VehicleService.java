@@ -5,7 +5,7 @@ import vehicle.iot.vehicletracker.entity.Vehicle;
 import java.util.List;
 
 /**
- * A Service for interacting with the repository
+ * A Vehicle Service for interacting with the Vehicle Repository
  *
  * @author marafat
  */

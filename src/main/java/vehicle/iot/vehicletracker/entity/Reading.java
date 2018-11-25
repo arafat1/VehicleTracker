@@ -7,6 +7,12 @@ import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
 
+/**
+ * A data class for holding reading information.
+ * Includes a builder for building a reading object
+ *
+ * @author marafat
+ */
 @EqualsAndHashCode
 @ToString
 @Getter

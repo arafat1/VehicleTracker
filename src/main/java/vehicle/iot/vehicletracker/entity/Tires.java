@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.Embeddable;
 
 /**
- * An embeddable class in Reading entity
+ * An embeddable class for Reading entity
  *
  * @author marafat
  */

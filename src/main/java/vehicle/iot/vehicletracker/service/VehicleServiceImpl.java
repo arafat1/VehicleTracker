@@ -17,10 +17,8 @@ import java.util.Optional;
  *
  * @author marafat
  */
-
 @Service
 public class VehicleServiceImpl implements VehicleService {
-
     private VehicleRepository vehicleRepository;
 
     @Autowired

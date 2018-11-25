@@ -8,10 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 import vehicle.iot.vehicletracker.entity.Reading;
 import vehicle.iot.vehicletracker.service.ReadingService;
 
+/**
+ * A REST Controller for Readings
+ *
+ * @author marafat
+ */
 @RestController
 @RequestMapping(value = "/readings")
 public class ReadingController {
-
     private ReadingService readingService;
 
     @Autowired

@@ -1,6 +1,5 @@
 package vehicle.iot.vehicletracker.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeEach;
@@ -20,14 +19,16 @@ import vehicle.iot.vehicletracker.entity.Tires;
 import vehicle.iot.vehicletracker.entity.Vehicle;
 import vehicle.iot.vehicletracker.repository.VehicleRepository;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+/**
+ * Integration Tests for Reading end points
+ *
+ * @author marafat
+ */
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("integrationtest")
 class ReadingControllerTest {
-
     @Autowired
     MockMvc mvc;
 
@@ -36,6 +37,7 @@ class ReadingControllerTest {
 
     @BeforeEach
     void setUp() {
+        // for referential integrity
         Vehicle.Builder vehicleBuilder = new Vehicle.Builder("5");
         vehicleBuilder.setMake("Honda").setModel("Accord").setYear(2015).setRedlineRpm(5000)
                 .setMaxFuelVolume(15).setLastServiceDate("2017-05-25T17:31:25.268Z");

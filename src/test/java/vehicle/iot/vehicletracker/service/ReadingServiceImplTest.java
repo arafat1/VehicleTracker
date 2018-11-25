@@ -11,9 +11,13 @@ import vehicle.iot.vehicletracker.entity.Tires;
 import vehicle.iot.vehicletracker.repository.ReadingRepository;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static org.mockito.BDDMockito.given;
 
+/**
+ * Unit Tests for Reading Service
+ *
+ * @author marafat
+ */
 @ExtendWith(MockitoExtension.class)
 class ReadingServiceImplTest {
     @InjectMocks
