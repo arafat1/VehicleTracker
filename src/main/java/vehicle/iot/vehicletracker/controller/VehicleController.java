@@ -7,6 +7,11 @@ import vehicle.iot.vehicletracker.service.VehicleService;
 
 import java.util.List;
 
+/**
+ * Rest API end points
+ *
+ * @author marafat
+ */
 @RestController
 @RequestMapping(value = "vehicles")
 public class VehicleController {

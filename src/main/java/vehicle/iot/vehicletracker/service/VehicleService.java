@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * A Service for interacting with the repository
+ *
  * @author marafat
  */
 public interface VehicleService {

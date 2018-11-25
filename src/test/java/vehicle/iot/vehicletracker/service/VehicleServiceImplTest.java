@@ -19,6 +19,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static org.mockito.BDDMockito.given;
 
+/**
+ * Unit Tests for Vehicle Service
+ *
+ * @author marafat
+ */
 @ExtendWith(MockitoExtension.class)
 class VehicleServiceImplTest {
     @InjectMocks

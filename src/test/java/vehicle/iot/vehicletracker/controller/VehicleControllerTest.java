@@ -1,14 +1,11 @@
 package vehicle.iot.vehicletracker.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,8 +18,11 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import vehicle.iot.vehicletracker.entity.Vehicle;
 import vehicle.iot.vehicletracker.repository.VehicleRepository;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+/**
+ * Integration Tests
+ *
+ * @author marafat
+ */
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 @AutoConfigureMockMvc

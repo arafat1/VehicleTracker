@@ -12,6 +12,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * An implementation of Vehicle Service Interface
+ *
+ * @author marafat
+ */
+
 @Service
 public class VehicleServiceImpl implements VehicleService {
 

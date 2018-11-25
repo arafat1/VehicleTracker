@@ -5,6 +5,7 @@ import vehicle.iot.vehicletracker.entity.Vehicle;
 
 /**
  * A Vehicle Repository for persisting data
+ *
  * @author marafat
  */
 public interface VehicleRepository extends CrudRepository<Vehicle, String> {
